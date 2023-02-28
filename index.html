@@ -16,20 +16,20 @@
  <!-- Schema.org markup for Google+ -->
   <meta itemprop="name" content="Curriculum Vitae">
   <meta itemprop="description" content="Información laboral y personal sobre Marta Lopez">
-  <meta itemprop="image" content="imagen1.jpg>
+  <meta itemprop="image" content="imagen4.jpg>
  <!-- Twitter Card data -->
-  <meta name="twitter:card" content="imagen1.jpg">
+  <meta name="twitter:card" content="imagen4.jpg">
   <meta name="twitter:site" content="@MartaLopez">
   <meta name="twitter:title" content="Curriculum Vitae">
   <meta name="twitter:description" content="Información laboral y personal sobre Marta Lopez">
   <meta name="twitter:creator" content="@MartaLopez">
  <!-- Twitter summary card with large image. Al menos estas medidas 280x150px -->
-  <meta name="twitter:image:src" content="imagen1.jpg">
+  <meta name="twitter:image:src" content="imagen4.jpg">
  <!-- Open Graph data -->
   <meta property="og:title" content="Curriculum Vitae" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content=" http://www.example.com" />
-  <meta property="og:image" content="imagen1.jpg" />
+  <meta property="og:image" content="imagen4.jpg" />
   <meta property="og:description" content="Información laboral y personal sobre Marta Lopez" />
   <meta property="og:site_name" content="Curriculum Vitae" />
   <meta property="article:published_time" content="2023-02-28T05:59:00+01:00" />
@@ -56,14 +56,58 @@
 
         <div class="dd-white dd-text-grey dd-card-4">
           <div class="dd-display-container">
-            <img
-              id="imagen"
-              src="imagen1.jpg"
-              alt="Foto de perfil" style="width:100%">
-            <div class="dd-display-bottomleft dd-container dd-text-black">
-              <h2>Marta Lopez</h2>
-              
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 2</div>
+              <img src="C:\Users\damia\Desarrollo Web\.vscode\Proyecto_CV\Images\imagen4.jpg" style="width:100%">
+              <div class="text">Marta Lopez</div>
             </div>
+            <div class="slideshow-container"> 
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 2</div>
+              <img src="C:\Users\damia\Desarrollo Web\.vscode\Proyecto_CV\Images\imagen5.jpg" style="width:100%">
+              <div class="text">Marta Lopez</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
           </div>
           <div class="dd-container">
             <p><i class="fa fa-briefcase fa-fw dd-margin-right dd-large dd-text-teal"></i>Desarrolladora</p>
