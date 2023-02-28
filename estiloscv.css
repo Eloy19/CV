@@ -153,7 +153,53 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .dd-button:hover{color:#000!important;background-color:#ccc!important}
 .dd-transparent,.dd-hover-none:hover{background-color:transparent!important}
 .dd-hover-none:hover{box-shadow:none!important}
-.carousel {color: #009688; }
+* {box-sizing:border-box}
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.text {
+    color: #009688;
+    font-size: 30px;
+    padding: 0px 0px;
+    position: static;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+  }
+.mySlides {
+  display: none;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: auto;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev, .next {
+  background-color: rgba(0,0,0,0.8);
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
 /* Colores */
 .dd-amber,.dd-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
 .dd-aqua,.dd-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
